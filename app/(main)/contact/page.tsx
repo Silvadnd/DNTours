@@ -41,7 +41,7 @@ export default function ContactPage() {
                                 </div>
                                 <div>
                                     <p className="font-bold text-lg text-dn-navy">Email Us</p>
-                                    <a href="mailto:info@dntours.lk" className="text-gray-600 hover:text-dn-orange transition-colors">info@dntours.lk</a>
+                                    <a href="mailto:da.dinethnawanjana@gmail.com" className="text-gray-600 hover:text-dn-orange transition-colors">da.dinethnawanjana@gmail.com</a>
                                 </div>
                             </div>
 
@@ -51,7 +51,7 @@ export default function ContactPage() {
                                 </div>
                                 <div>
                                     <p className="font-bold text-lg text-dn-navy">Call Us</p>
-                                    <a href="tel:+94771234567" className="text-gray-600 hover:text-dn-orange transition-colors">+94 77 123 4567</a>
+                                    <a href="tel:+94 77 945 2473" className="text-gray-600 hover:text-dn-orange transition-colors">+94 77 945 2473</a>
                                 </div>
                             </div>
 
@@ -61,7 +61,7 @@ export default function ContactPage() {
                                 </div>
                                 <div>
                                     <p className="font-bold text-lg text-dn-navy">Visit Us</p>
-                                    <p className="text-gray-600">No. 123, Galle Road, Colombo 03, Sri Lanka</p>
+                                    <p className="text-gray-600">Galwehera, Ahungalla, Ahungalla 80562</p>
                                 </div>
                             </div>
                         </div>
