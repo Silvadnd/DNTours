@@ -1,0 +1,31 @@
+# *
+User-agent: *
+Allow: /
+
+# Disallow admin pages
+User-agent: *
+Disallow: /admin
+Disallow: /api
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Yandex (Russian search engine)
+User-agent: Yandex
+Allow: /
+Crawl-delay: 0
+
+# Baidu (Chinese search engine)
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://dntours.lk/sitemap.xml

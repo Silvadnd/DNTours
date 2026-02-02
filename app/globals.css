@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dn-navy: #0B1B2B;
+  --color-dn-ocean: #0E3A5D;
+  --color-dn-orange: #FF6A2A;
+  --color-dn-orange-soft: #FF8A4C;
+  --color-dn-bg: #F5F7FA;
+  --color-dn-text: #0F172A;
+  --color-glass-bg: rgba(255, 255, 255, 0.08);
+  --color-glass-border: rgba(255, 255, 255, 0.14);
+
+  --font-heading: var(--font-poppins), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+  
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+:root {
+  --background: #F5F7FA;
+  --foreground: #0F172A;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-glass-bg border border-glass-border backdrop-blur-xl shadow-lg;
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0,0,0,0.7);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
