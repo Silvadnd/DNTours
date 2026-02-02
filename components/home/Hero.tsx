@@ -23,9 +23,6 @@ const Hero = () => {
                 <source src="/videos/hero.mp4" type="video/mp4" />
             </video>
 
-            {/* Glassmorphism Overlay */}
-            <div className="absolute inset-0 backdrop-blur-[3px] bg-white/10 z-10"></div>
-
             {/* Content */}
             <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-4 max-w-5xl mx-auto">
                 <motion.h1

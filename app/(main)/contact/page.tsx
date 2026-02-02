@@ -1,10 +1,37 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react";
 
 export default function ContactPage() {
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        message: ''
+    });
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        
+        // Construct WhatsApp message
+        const whatsappMessage = `Hello! I'm ${formData.firstName} ${formData.lastName}%0A%0AEmail: ${formData.email}%0A%0AMessage: ${formData.message}`;
+        
+        // WhatsApp number (use international format without + or spaces)
+        const phoneNumber = '94779452473';
+        
+        // Open WhatsApp with pre-filled message
+        window.open(`https://wa.me/${phoneNumber}?text=${whatsappMessage}`, '_blank');
+    };
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
     return (
         <div className="bg-white min-h-screen">
             {/* Hero Section */}
@@ -134,29 +161,61 @@ export default function ContactPage() {
                     {/* Contact Form */}
                     <div className="bg-dn-bg p-8 md:p-10 rounded-3xl shadow-xl">
                         <h3 className="font-heading font-bold text-2xl mb-6 text-dn-navy">Send a Message</h3>
-                        <form className="space-y-6">
+                        <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
                                     <label className="text-sm font-bold text-gray-700">First Name</label>
-                                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-dn-orange/50 transition-all" placeholder="John" />
+                                    <input 
+                                        type="text" 
+                                        name="firstName"
+                                        value={formData.firstName}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-dn-orange/50 transition-all" 
+                                        placeholder="John" 
+                                    />
                                 </div>
                                 <div className="space-y-2">
                                     <label className="text-sm font-bold text-gray-700">Last Name</label>
-                                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-dn-orange/50 transition-all" placeholder="Doe" />
+                                    <input 
+                                        type="text" 
+                                        name="lastName"
+                                        value={formData.lastName}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-dn-orange/50 transition-all" 
+                                        placeholder="Doe" 
+                                    />
                                 </div>
                             </div>
 
                             <div className="space-y-2">
                                 <label className="text-sm font-bold text-gray-700">Email Address</label>
-                                <input type="email" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-dn-orange/50 transition-all" placeholder="john@example.com" />
+                                <input 
+                                    type="email" 
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    required
+                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-dn-orange/50 transition-all" 
+                                    placeholder="john@example.com" 
+                                />
                             </div>
 
                             <div className="space-y-2">
                                 <label className="text-sm font-bold text-gray-700">Your Message</label>
-                                <textarea rows={4} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-dn-orange/50 transition-all" placeholder="Tell us about your travel plans..."></textarea>
+                                <textarea 
+                                    rows={4} 
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    required
+                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-dn-orange/50 transition-all" 
+                                    placeholder="Tell us about your travel plans..."
+                                ></textarea>
                             </div>
 
-                            <Button variant="primary" className="w-full py-4 text-lg shadow-dn-orange/20">Send Message</Button>
+                            <Button type="submit" variant="primary" className="w-full py-4 text-lg shadow-dn-orange/20">Send Message</Button>
                         </form>
                     </div>
                 </div>
