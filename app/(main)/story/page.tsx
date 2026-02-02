@@ -19,7 +19,7 @@ export default function StoryPage() {
         <div className="bg-white min-h-screen">
             {/* Hero Section for Story */}
             <div className="relative h-[50vh] w-full flex items-center justify-center">
-                <Image src="/images/ui/27.jpeg" alt="Our Story" fill className="object-cover" />
+                <Image src="/images/ui/42.jpg" alt="Our Story" fill className="object-cover" />
                 <div className="absolute inset-0 bg-dn-navy/70" />
                 <div className="relative z-10 text-center text-white px-4">
                     <h1 className="font-heading font-bold text-5xl md:text-6xl mb-4">Our Story</h1>

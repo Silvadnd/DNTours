@@ -9,24 +9,24 @@ const categories = [
         items: [
             { name: "Sigiriya Rock Fortress", desc: "The ancient palace on a rock, often called the 8th Wonder of the World.", image: "/images/ui/98.jpeg", link: "https://whc.unesco.org/en/list/202/" },
             { name: "Ella", desc: "A hiker's paradise with stunning views and the famous Nine Arch Bridge.", image: "/images/ui/97.jpeg", link: "https://www.lonelyplanet.com/sri-lanka/the-hill-country/ella" },
-            { name: "Mirissa Beach", desc: "Famous for whale watching, surfing, and vibrant nightlife.", image: "/images/ui/95.jpg", link: "https://www.srilanka.travel/mirissa" },
+            { name: "Colombo City Tour", desc: "Experience the commercial capital with culture, food, and modern attractions.", image: "/images/ui/62.png", link: "https://www.srilanka.travel/colombo" },
             { name: "Galle Fort", desc: "A UNESCO World Heritage site featuring colonial architecture.", image: "/images/ui/35.jpeg", link: "https://whc.unesco.org/en/list/451/" }
         ]
     },
     {
         title: "Hidden Gems",
         items: [
-            { name: "Haputale (Lipton’s Seat)", desc: "Where Sir Thomas Lipton surveyed his tea empire.", image: "/images/ui/97.jpg", link: "https://www.srilanka.travel/haputale" },
-            { name: "Nilaveli Beach", desc: "Crystal clear waters and white sands in Trincomalee.", image: "/images/ui/49.jpg", link: "https://www.srilanka.travel/nilaveli" },
-            { name: "Kalpitiya", desc: "The ultimate destination for kitesurfing and dolphin watching.", image: "/images/ui/61.jpeg", link: "https://www.srilanka.travel/kalpitiya" }
+            { name: "Madu River", desc: "A serene mangrove river safari rich in wildlife and local culture.", image: "/images/ui/4d.jpg", link: "https://www.srilanka.travel/madu-river" },
+            { name: "Bentota River", desc: "Perfect for river safaris, water sports, and peaceful boat rides.", image: "/images/ui/5d.jpg", link: "https://www.srilanka.travel/bentota-river" }
         ]
     },
     {
         title: "Most Beautiful Places",
         items: [
             { name: "Nuwara Eliya", desc: "Known as 'Little England' for its cool climate and colonial bungalows.", image: "/images/ui/44.jpg", link: "https://www.lonelyplanet.com/sri-lanka/the-hill-country/nuwara-eliya" },
-            { name: "Horton Plains", desc: "Home to World's End, a sheer drop with stunning panoramic views.", image: "/images/ui/96.jpeg", link: "https://whc.unesco.org/en/list/1203/" },
-            { name: "Yala National Park", desc: "The best place to spot leopards in the wild.", image: "/images/ui/42.jpg", link: "https://www.srilanka.travel/yala" }
+            { name: "Mirissa Whale Watching", desc: "One of the best locations in the world to spot blue whales.", image: "/images/ui/6d.webp", link: "https://whc.unesco.org/en/list/1203/" },
+            { name: "Yala National Park", desc: "The best place to spot leopards in the wild.", image: "/images/ui/42.jpg", link: "https://www.srilanka.travel/yala" },
+            { name: "Udawalawa National Park", desc: "Famous for elephant sightings and breathtaking safari experiences.", image: "/images/ui/7c.jpg", link: "https://www.srilanka.travel/udawalawa" }
         ]
     }
 ];

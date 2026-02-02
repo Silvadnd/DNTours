@@ -37,7 +37,7 @@ export default function ContactPage() {
             {/* Hero Section */}
             <section className="relative h-[60vh] min-h-125 w-full overflow-hidden">
                 <Image 
-                    src="/images/ui/50.jpg" 
+                    src="/images/ui/contact.jpg" 
                     alt="Contact Us" 
                     fill 
                     className="object-cover"
