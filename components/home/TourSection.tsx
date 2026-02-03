@@ -9,44 +9,34 @@ const tours = {
   "One Day": [
     {
       id: "1d-1",
-      name: "Galle Day Tour",
-      description: "Explore southern coast highlights including beaches, history, and cultural sites.",
+      name: "Madu River Tour",
+      description: "Explore the stunning mangrove ecosystem and biodiversity.",
       locations: [
-        { id: "g1", name: "Turtle Hatchery", lat: 6.0350, lng: 80.2168, image: "/images/ui/1.jpeg" },
-        { id: "g2", name: "Moonstone Mine", lat: 6.0300, lng: 80.1200, image: "/images/ui/2.jpeg" },
-        { id: "g3", name: "Tsunami Museum", lat: 6.0315, lng: 80.2150, image: "/images/ui/3.jpeg" },
-        { id: "g4", name: "Hikkaduwa Beach", lat: 6.1400, lng: 80.1000, image: "/images/ui/4.jpeg" },
-        { id: "g5", name: "Spice Garden", lat: 6.0500, lng: 80.2000, image: "/images/ui/5.jpeg" },
-        { id: "g6", name: "Galle Dutch Fort", lat: 6.0328, lng: 80.2168, image: "/images/ui/6.jpeg" }
+        { id: "mr1", name: "Madu River", lat: 6.3049, lng: 80.0775, image: "/images/ui/1.jpeg" }
       ]
     },
 
     {
       id: "1d-2",
-      name: "Kandy Day Tour",
-      description: "A cultural journey through Sri Lanka’s hill capital.",
+      name: "Bentota River Safari",
+      description: "Mangrove exploration and river adventure in Bentota.",
       locations: [
-        { id: "k1", name: "Pinnawala Elephant Orphanage", lat: 7.3000, lng: 80.3860, image: "/images/ui/7.jpeg" },
-        { id: "k2", name: "Royal Botanical Garden", lat: 7.2710, lng: 80.5970, image: "/images/ui/8.jpeg" },
-        { id: "k3", name: "Temple of the Tooth Relic", lat: 7.2936, lng: 80.6414, image: "/images/ui/9.jpeg" },
-        { id: "k4", name: "Tea Plantation & Factory", lat: 7.2000, lng: 80.6000, image: "/images/ui/10.jpeg" },
-        { id: "k5", name: "Spice & Herbal Garden", lat: 7.2500, lng: 80.5500, image: "/images/ui/11.jpeg" }
+        { id: "br1", name: "Bentota River", lat: 6.4256, lng: 79.9951, image: "/images/ui/4.jpeg" }
       ]
     },
 
     {
       id: "1d-3",
-      name: "Yala Day Tour",
-      description: "Wildlife adventure combined with traditional coastal life.",
+      name: "Mirissa Whale Watching",
+      description: "Experience majestic whales and dolphins in the Indian Ocean.",
       locations: [
-        { id: "y1", name: "Yala National Park", lat: 6.3667, lng: 81.5167, image: "/images/ui/12.jpeg" },
-        { id: "y2", name: "Stilt Fishermen", lat: 5.9750, lng: 80.4250, image: "/images/ui/13.jpeg" }
+        { id: "mw1", name: "Mirissa", lat: 5.9467, lng: 80.4575, image: "/images/ui/12.jpeg" }
       ]
     },
 
     {
       id: "1d-4",
-      name: "Udawalawe Day Tour",
+      name: "Udawalawe Safari",
       description: "Close encounters with elephants in their natural habitat.",
       locations: [
         { id: "u1", name: "Udawalawe National Park", lat: 6.4240, lng: 80.8880, image: "/images/ui/14.jpeg" },
@@ -56,20 +46,10 @@ const tours = {
 
     {
       id: "1d-5",
-      name: "Sigiriya Day Tour",
-      description: "Ancient history, heritage, and breathtaking architecture.",
+      name: "Colombo City Tour",
+      description: "Discover the vibrant capital city with its colonial heritage and modern attractions.",
       locations: [
-        { id: "s1", name: "Sigiriya Rock Fortress", lat: 7.9570, lng: 80.7603, image: "/images/ui/16.jpeg" },
-        { id: "s2", name: "Dambulla Cave Temple", lat: 7.8567, lng: 80.6497, image: "/images/ui/17.jpeg" }
-      ]
-    },
-    
-    {
-      id: "1d-6",
-      name: "Pinnawala Day Tour",
-      description: "Experience elephant conservation and river bathing.",
-      locations: [
-        { id: "p1", name: "Pinnawala Elephant Orphanage", lat: 7.3000, lng: 80.3860, image: "/images/ui/18.jpeg" }
+        { id: "c1", name: "Colombo City", lat: 6.9271, lng: 79.8612, image: "/images/ui/16.jpeg" }
       ]
     }
     ],
