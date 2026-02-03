@@ -11,18 +11,43 @@ export default function ContactPage() {
         email: '',
         message: ''
     });
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setIsSubmitting(true);
         
-        // Construct WhatsApp message
-        const whatsappMessage = `Hello! I'm ${formData.firstName} ${formData.lastName}%0A%0AEmail: ${formData.email}%0A%0AMessage: ${formData.message}`;
-        
-        // WhatsApp number (use international format without + or spaces)
-        const phoneNumber = '94779452473';
-        
-        // Open WhatsApp with pre-filled message
-        window.open(`https://wa.me/${phoneNumber}?text=${whatsappMessage}`, '_blank');
+        try {
+            // Send email using mailto link
+            const subject = encodeURIComponent(`New Contact Message from ${formData.firstName} ${formData.lastName}`);
+            const body = encodeURIComponent(
+                `Name: ${formData.firstName} ${formData.lastName}\n` +
+                `Email: ${formData.email}\n\n` +
+                `Message:\n${formData.message}`
+            );
+            
+            // Create mailto link
+            const mailtoLink = `mailto:da.dinethnawanjana@gmail.com?subject=${subject}&body=${body}`;
+            
+            // Open default email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            setIsSubmitted(true);
+            
+            // Reset form
+            setFormData({
+                firstName: '',
+                lastName: '',
+                email: '',
+                message: ''
+            });
+        } catch (error) {
+            console.error('Error sending message:', error);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -115,7 +140,7 @@ export default function ContactPage() {
                                 
                                 {/* YouTube */}
                                 <a 
-                                    href="https://www.youtube.com/@dntoursahungalla"
+                                    href="https://youtube.com/@dntoursahungalla01?si=jD3Pgm5cADaR8gaA"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     title="YouTube"
@@ -161,62 +186,89 @@ export default function ContactPage() {
                     {/* Contact Form */}
                     <div className="bg-dn-bg p-8 md:p-10 rounded-3xl shadow-xl">
                         <h3 className="font-heading font-bold text-2xl mb-6 text-dn-navy">Send a Message</h3>
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        {isSubmitted ? (
+                            <div className="text-center py-12">
+                                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <h4 className="text-2xl font-bold text-dn-navy mb-3">Thank You!</h4>
+                                <p className="text-gray-600 mb-6">Your message has been sent successfully. We&apos;ll get back to you soon!</p>
+                                <Button 
+                                    onClick={() => setIsSubmitted(false)} 
+                                    variant="primary"
+                                    className="px-8"
+                                >
+                                    Send Another Message
+                                </Button>
+                            </div>
+                        ) : (
+                            <form onSubmit={handleSubmit} className="space-y-6">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-bold text-gray-700">First Name</label>
+                                        <input 
+                                            type="text" 
+                                            name="firstName"
+                                            value={formData.firstName}
+                                            onChange={handleChange}
+                                            required
+                                            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-dn-orange/50 transition-all" 
+                                            placeholder="John" 
+                                        />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="text-sm font-bold text-gray-700">Last Name</label>
+                                        <input 
+                                            type="text" 
+                                            name="lastName"
+                                            value={formData.lastName}
+                                            onChange={handleChange}
+                                            required
+                                            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-dn-orange/50 transition-all" 
+                                            placeholder="Doe" 
+                                        />
+                                    </div>
+                                </div>
+
                                 <div className="space-y-2">
-                                    <label className="text-sm font-bold text-gray-700">First Name</label>
+                                    <label className="text-sm font-bold text-gray-700">Email Address</label>
                                     <input 
-                                        type="text" 
-                                        name="firstName"
-                                        value={formData.firstName}
+                                        type="email" 
+                                        name="email"
+                                        value={formData.email}
                                         onChange={handleChange}
                                         required
                                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-dn-orange/50 transition-all" 
-                                        placeholder="John" 
+                                        placeholder="john@example.com" 
                                     />
                                 </div>
+
                                 <div className="space-y-2">
-                                    <label className="text-sm font-bold text-gray-700">Last Name</label>
-                                    <input 
-                                        type="text" 
-                                        name="lastName"
-                                        value={formData.lastName}
+                                    <label className="text-sm font-bold text-gray-700">Your Message</label>
+                                    <textarea 
+                                        rows={4} 
+                                        name="message"
+                                        value={formData.message}
                                         onChange={handleChange}
                                         required
                                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-dn-orange/50 transition-all" 
-                                        placeholder="Doe" 
-                                    />
+                                        placeholder="Tell us about your travel plans..."
+                                    ></textarea>
                                 </div>
-                            </div>
 
-                            <div className="space-y-2">
-                                <label className="text-sm font-bold text-gray-700">Email Address</label>
-                                <input 
-                                    type="email" 
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    required
-                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-dn-orange/50 transition-all" 
-                                    placeholder="john@example.com" 
-                                />
-                            </div>
-
-                            <div className="space-y-2">
-                                <label className="text-sm font-bold text-gray-700">Your Message</label>
-                                <textarea 
-                                    rows={4} 
-                                    name="message"
-                                    value={formData.message}
-                                    onChange={handleChange}
-                                    required
-                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-dn-orange/50 transition-all" 
-                                    placeholder="Tell us about your travel plans..."
-                                ></textarea>
-                            </div>
-
-                            <Button type="submit" variant="primary" className="w-full py-4 text-lg shadow-dn-orange/20">Send Message</Button>
-                        </form>
+                                <Button 
+                                    type="submit" 
+                                    variant="primary" 
+                                    className="w-full py-4 text-lg shadow-dn-orange/20"
+                                    disabled={isSubmitting}
+                                >
+                                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                                </Button>
+                            </form>
+                        )}
                     </div>
                 </div>
 
