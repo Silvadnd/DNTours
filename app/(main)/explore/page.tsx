@@ -10,7 +10,7 @@ const categories = [
             { name: "Sigiriya Rock Fortress", desc: "The ancient palace on a rock, often called the 8th Wonder of the World.", image: "/images/ui/98.jpeg", link: "https://whc.unesco.org/en/list/202/" },
             { name: "Ella", desc: "A hiker's paradise with stunning views and the famous Nine Arch Bridge.", image: "/images/ui/97.jpeg", link: "https://www.lonelyplanet.com/sri-lanka/the-hill-country/ella" },
             { name: "Colombo City Tour", desc: "Experience the commercial capital with culture, food, and modern attractions.", image: "/images/ui/62.png", link: "https://www.srilanka.travel/colombo" },
-            { name: "Galle Fort", desc: "A UNESCO World Heritage site featuring colonial architecture.", image: "/images/ui/35.jpeg", link: "https://whc.unesco.org/en/list/451/" }
+            { name: "Galle Fort", desc: "A UNESCO World Heritage site featuring colonial architecture.", image: "/images/ui/1a.webp", link: "https://whc.unesco.org/en/list/451/" }
         ]
     },
     {
