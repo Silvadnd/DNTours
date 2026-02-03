@@ -19,32 +19,37 @@ export default function ContactPage() {
         setIsSubmitting(true);
         
         try {
-            // Send email using mailto link
-            const subject = encodeURIComponent(`New Contact Message from ${formData.firstName} ${formData.lastName}`);
-            const body = encodeURIComponent(
-                `Name: ${formData.firstName} ${formData.lastName}\n` +
-                `Email: ${formData.email}\n\n` +
-                `Message:\n${formData.message}`
-            );
-            
-            // Create mailto link
-            const mailtoLink = `mailto:da.dinethnawanjana@gmail.com?subject=${subject}&body=${body}`;
-            
-            // Open default email client
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            setIsSubmitted(true);
-            
-            // Reset form
-            setFormData({
-                firstName: '',
-                lastName: '',
-                email: '',
-                message: ''
+            // Send to Formspree
+            const response = await fetch('https://formspree.io/f/meeznwng', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: `${formData.firstName} ${formData.lastName}`,
+                    email: formData.email,
+                    message: formData.message,
+                    _subject: `New Contact Message from ${formData.firstName} ${formData.lastName}`
+                }),
             });
+
+            if (response.ok) {
+                // Show success message
+                setIsSubmitted(true);
+                
+                // Reset form
+                setFormData({
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    message: ''
+                });
+            } else {
+                alert('Failed to send message. Please try again.');
+            }
         } catch (error) {
             console.error('Error sending message:', error);
+            alert('Failed to send message. Please try again.');
         } finally {
             setIsSubmitting(false);
         }
