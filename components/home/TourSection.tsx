@@ -12,7 +12,7 @@ const tours = {
       name: "Madu River Tour",
       description: "Explore the stunning mangrove ecosystem and biodiversity.",
       locations: [
-        { id: "mr1", name: "Madu River", lat: 6.3049, lng: 80.0775, image: "/images/ui/1.jpeg" }
+        { id: "mr1", name: "Madu River", lat: 6.3049, lng: 80.0775, image: "/images/ui/4d.jpg" }
       ]
     },
 
@@ -21,7 +21,7 @@ const tours = {
       name: "Bentota River Safari",
       description: "Mangrove exploration and river adventure in Bentota.",
       locations: [
-        { id: "br1", name: "Bentota River", lat: 6.4256, lng: 79.9951, image: "/images/ui/4.jpeg" }
+        { id: "br1", name: "Bentota River", lat: 6.4256, lng: 79.9951, image: "/images/ui/5d.jpg" }
       ]
     },
 
@@ -30,7 +30,7 @@ const tours = {
       name: "Mirissa Whale Watching",
       description: "Experience majestic whales and dolphins in the Indian Ocean.",
       locations: [
-        { id: "mw1", name: "Mirissa", lat: 5.9467, lng: 80.4575, image: "/images/ui/12.jpeg" }
+        { id: "mw1", name: "Mirissa", lat: 5.9467, lng: 80.4575, image: "/images/ui/95.jpg" }
       ]
     },
 
@@ -39,8 +39,8 @@ const tours = {
       name: "Udawalawe Safari",
       description: "Close encounters with elephants in their natural habitat.",
       locations: [
-        { id: "u1", name: "Udawalawe National Park", lat: 6.4240, lng: 80.8880, image: "/images/ui/14.jpeg" },
-        { id: "u2", name: "Elephant Transit Home", lat: 6.4740, lng: 80.8990, image: "/images/ui/15.jpeg" }
+        { id: "u1", name: "Udawalawe National Park", lat: 6.4240, lng: 80.8880, image: "/images/ui/7c.jpg" },
+        { id: "u2", name: "Elephant Transit Home", lat: 6.4740, lng: 80.8990, image: "/images/ui/11.jpeg" }
       ]
     },
 
@@ -49,7 +49,7 @@ const tours = {
       name: "Colombo City Tour",
       description: "Discover the vibrant capital city with its colonial heritage and modern attractions.",
       locations: [
-        { id: "c1", name: "Colombo City", lat: 6.9271, lng: 79.8612, image: "/images/ui/16.jpeg" }
+        { id: "c1", name: "Colombo City", lat: 6.9271, lng: 79.8612, image: "/images/ui/62.png" }
       ]
     }
     ],
