@@ -10,48 +10,50 @@ const tours = {
     {
       id: "1d-1",
       name: "Sigiriya Tour",
-      description: "Ancient rock fortress and UNESCO World Heritage Site.",
+      description: "Ancient rock fortress with stunning frescoes and panoramic views.",
       locations: [
-        { id: "sig1", name: "Sigiriya Rock Fortress", lat: 7.9570, lng: 80.7603, image: "/images/ui/1.jpeg" }
+        { id: "sig1", name: "Sigiriya Rock Fortress", lat: 7.9570, lng: 80.7603, image: "/images/ui/16.jpeg" }
       ]
     },
 
     {
       id: "1d-2",
       name: "Kandy Tour",
-      description: "Cultural capital with temple and botanical gardens.",
+      description: "Cultural capital with the sacred Temple of the Tooth Relic.",
       locations: [
-        { id: "kan1", name: "Temple of the Tooth Relic", lat: 7.2936, lng: 80.6414, image: "/images/ui/2.jpeg" },
-        { id: "kan2", name: "Royal Botanical Garden", lat: 7.2710, lng: 80.5970, image: "/images/ui/3.jpeg" }
+        { id: "kan1", name: "Temple of the Tooth Relic", lat: 7.2936, lng: 80.6414, image: "/images/ui/9.jpeg" },
+        { id: "kan2", name: "Royal Botanical Garden", lat: 7.2710, lng: 80.5970, image: "/images/ui/8.jpeg" },
+        { id: "kan3", name: "Kandy Lake", lat: 7.2906, lng: 80.6337, image: "/images/ui/10.jpeg" }
       ]
     },
 
     {
       id: "1d-3",
       name: "Ella Tour",
-      description: "Scenic hill country with Nine Arch Bridge and tea estates.",
+      description: "Breathtaking landscapes, tea estates, and scenic train rides.",
       locations: [
-        { id: "ella1", name: "Nine Arch Bridge", lat: 6.8847, lng: 81.0458, image: "/images/ui/4.jpeg" },
-        { id: "ella2", name: "Little Adam's Peak", lat: 6.8667, lng: 81.0466, image: "/images/ui/5.jpeg" }
+        { id: "ella1", name: "Nine Arch Bridge", lat: 6.8667, lng: 81.0466, image: "/images/ui/22.jpeg" },
+        { id: "ella2", name: "Little Adam's Peak", lat: 6.8605, lng: 81.0424, image: "/images/ui/23.jpeg" },
+        { id: "ella3", name: "Ravana Falls", lat: 6.8231, lng: 81.0549, image: "/images/ui/24.jpeg" }
       ]
     },
 
     {
       id: "1d-4",
       name: "Galle Fort Tour",
-      description: "Historic Dutch fort and coastal colonial architecture.",
+      description: "UNESCO World Heritage Dutch colonial fortress by the sea.",
       locations: [
-        { id: "gal1", name: "Galle Dutch Fort", lat: 6.0328, lng: 80.2168, image: "/images/ui/6.jpeg" },
-        { id: "gal2", name: "Galle Lighthouse", lat: 6.0215, lng: 80.2177, image: "/images/ui/7.jpeg" }
+        { id: "galle1", name: "Galle Dutch Fort", lat: 6.0328, lng: 80.2168, image: "/images/ui/6.jpeg" },
+        { id: "galle2", name: "Galle Lighthouse", lat: 6.0241, lng: 80.2189, image: "/images/ui/5.jpeg" }
       ]
     },
 
     {
       id: "1d-5",
       name: "Yala Safari Tour",
-      description: "Wildlife safari in Sri Lanka's most visited national park.",
+      description: "Premier wildlife park with leopards, elephants, and diverse fauna.",
       locations: [
-        { id: "yala1", name: "Yala National Park", lat: 6.3667, lng: 81.5167, image: "/images/ui/8.jpeg" }
+        { id: "yala1", name: "Yala National Park", lat: 6.3667, lng: 81.5167, image: "/images/ui/12.jpeg" }
       ]
     },
 
@@ -60,24 +62,24 @@ const tours = {
       name: "Udawalawe Safari Tour",
       description: "Close encounters with elephants in their natural habitat.",
       locations: [
-        { id: "uda1", name: "Udawalawe National Park", lat: 6.4240, lng: 80.8880, image: "/images/ui/7c.jpg" },
-        { id: "uda2", name: "Elephant Transit Home", lat: 6.4740, lng: 80.8990, image: "/images/ui/9.jpeg" }
+        { id: "u1", name: "Udawalawe National Park", lat: 6.4240, lng: 80.8880, image: "/images/ui/7c.jpg" },
+        { id: "u2", name: "Elephant Transit Home", lat: 6.4740, lng: 80.8990, image: "/images/ui/11.jpeg" }
       ]
     },
 
     {
       id: "1d-7",
       name: "Sinharaja Rainforest Tour",
-      description: "UNESCO World Heritage rainforest with endemic wildlife.",
+      description: "UNESCO World Heritage tropical rainforest with endemic species.",
       locations: [
-        { id: "sin1", name: "Sinharaja Forest Reserve", lat: 6.4008, lng: 80.4497, image: "/images/ui/10.jpeg" }
+        { id: "sin1", name: "Sinharaja Forest Reserve", lat: 6.4031, lng: 80.4911, image: "/images/ui/25.jpeg" }
       ]
     },
 
     {
       id: "1d-8",
       name: "Mirissa Beach Tour",
-      description: "Pristine beach and whale watching experiences.",
+      description: "Pristine beaches and whale watching in the Indian Ocean.",
       locations: [
         { id: "mir1", name: "Mirissa Beach", lat: 5.9467, lng: 80.4575, image: "/images/ui/95.jpg" }
       ]
@@ -86,83 +88,87 @@ const tours = {
     {
       id: "1d-9",
       name: "Hikkaduwa Beach Tour",
-      description: "Surfing, coral reefs, and vibrant beach life.",
+      description: "Vibrant beach town with coral reefs and water sports.",
       locations: [
-        { id: "hik1", name: "Hikkaduwa Beach", lat: 6.1400, lng: 80.1000, image: "/images/ui/11.jpeg" }
+        { id: "hik1", name: "Hikkaduwa Beach", lat: 6.1400, lng: 80.1000, image: "/images/ui/4.jpeg" },
+        { id: "hik2", name: "Hikkaduwa Coral Reef", lat: 6.1300, lng: 80.0950, image: "/images/ui/3.jpeg" }
       ]
     },
 
     {
       id: "1d-10",
       name: "Bentota Tour",
-      description: "Beach resort with water sports and river safari.",
+      description: "Beach resort town with water sports and river safaris.",
       locations: [
         { id: "ben1", name: "Bentota Beach", lat: 6.4256, lng: 79.9951, image: "/images/ui/5d.jpg" },
-        { id: "ben2", name: "Bentota River", lat: 6.4190, lng: 80.0010, image: "/images/ui/12.jpeg" }
+        { id: "ben2", name: "Bentota River", lat: 6.4200, lng: 80.0000, image: "/images/ui/4d.jpg" }
       ]
     },
 
     {
       id: "1d-11",
       name: "Colombo City Tour",
-      description: "Capital city with colonial heritage and modern attractions.",
+      description: "Vibrant capital with colonial heritage and modern attractions.",
       locations: [
-        { id: "col1", name: "Colombo City", lat: 6.9271, lng: 79.8612, image: "/images/ui/62.png" }
+        { id: "col1", name: "Colombo City", lat: 6.9271, lng: 79.8612, image: "/images/ui/62.png" },
+        { id: "col2", name: "Galle Face Green", lat: 6.9271, lng: 79.8466, image: "/images/ui/61.jpeg" }
       ]
     },
 
     {
       id: "1d-12",
       name: "Hambantota Tour",
-      description: "Southern port city with wildlife and natural attractions.",
+      description: "Southern coastal town with port, wildlife, and beaches.",
       locations: [
-        { id: "ham1", name: "Hambantota City", lat: 6.1244, lng: 81.1185, image: "/images/ui/13.jpeg" }
+        { id: "ham1", name: "Hambantota Port", lat: 6.1245, lng: 81.1185, image: "/images/ui/26.jpeg" },
+        { id: "ham2", name: "Bundala National Park", lat: 6.1919, lng: 81.2049, image: "/images/ui/27.jpeg" }
       ]
     },
 
     {
       id: "1d-13",
       name: "Dambulla Cave Temple Tour",
-      description: "Ancient Buddhist cave temple complex with stunning murals.",
+      description: "Ancient Buddhist cave complex with stunning murals and statues.",
       locations: [
-        { id: "dam1", name: "Dambulla Cave Temple", lat: 7.8567, lng: 80.6497, image: "/images/ui/14.jpeg" }
+        { id: "dam1", name: "Dambulla Cave Temple", lat: 7.8567, lng: 80.6497, image: "/images/ui/17.jpeg" }
       ]
     },
 
     {
       id: "1d-14",
       name: "Pidurangala Rock Tour",
-      description: "Alternative viewpoint with panoramic views of Sigiriya.",
+      description: "Ancient rock temple with spectacular views of Sigiriya.",
       locations: [
-        { id: "pid1", name: "Pidurangala Rock", lat: 7.9687, lng: 80.7580, image: "/images/ui/15.jpeg" }
+        { id: "pid1", name: "Pidurangala Rock", lat: 7.9647, lng: 80.7561, image: "/images/ui/18.jpeg" }
       ]
     },
 
     {
       id: "1d-15",
       name: "Madu Ganga River Safari",
-      description: "Mangrove wetlands with diverse ecosystems and wildlife.",
+      description: "Mangrove wetland ecosystem with rich biodiversity.",
       locations: [
-        { id: "mad1", name: "Madu Ganga River", lat: 6.3049, lng: 80.0775, image: "/images/ui/4d.jpg" }
+        { id: "mad1", name: "Madu River", lat: 6.3049, lng: 80.0775, image: "/images/ui/4d.jpg" }
       ]
     },
 
     {
       id: "1d-16",
       name: "Whale Watching Tour",
-      description: "Blue whales and dolphins in the Indian Ocean.",
+      description: "Experience majestic blue whales and dolphins.",
       locations: [
-        { id: "wha1", name: "Mirissa Whale Watching", lat: 5.9467, lng: 80.4575, image: "/images/ui/16.jpeg" }
+        { id: "whale1", name: "Mirissa Whale Watching", lat: 5.9467, lng: 80.4575, image: "/images/ui/95.jpg" }
       ]
     },
 
     {
       id: "1d-17",
       name: "Hill Country Tour",
-      description: "Tea plantations, waterfalls, and cool mountain climate.",
+      description: "Scenic tea plantations and cool mountain climate.",
       locations: [
-        { id: "hil1", name: "Nuwara Eliya", lat: 6.9497, lng: 80.7891, image: "/images/ui/17.jpeg" },
-        { id: "hil2", name: "Horton Plains", lat: 6.8097, lng: 80.7947, image: "/images/ui/18.jpeg" }
+        { id: "hill1", name: "Nuwara Eliya", lat: 6.9497, lng: 80.7891, image: "/images/ui/32.jpeg" },
+        { id: "hill2", name: "Tea Plantation", lat: 6.9500, lng: 80.7800, image: "/images/ui/13.jpeg" },
+        { id: "hill3", name: "Gregory Lake", lat: 6.9570, lng: 80.7820, image: "/images/ui/14.jpeg" }
       ]
     }
     ],
