@@ -436,10 +436,10 @@ const TourSection = () => {
                 </div>
 
                 {/* Main Tour Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
                     {/* Left: Options Selection */}
-                    <div className="col-span-1 space-y-4">
-                        <div className="space-y-4 max-h-120 overflow-y-auto pr-2 custom-scrollbar">
+                    <div className="col-span-1 flex flex-col h-full">
+                        <div className="space-y-4 max-h-120 lg:max-h-none flex-1 min-h-0 overflow-y-auto pr-2 custom-scrollbar mb-4">
                             {activeTourOptions.map((option) => (
                                 <div
                                     key={option.id}
@@ -471,7 +471,7 @@ const TourSection = () => {
                         </div>
 
                         {/* Action Box for Selected Tour */}
-                        <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-md space-y-3">
+                        <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-md space-y-3 mt-auto">
                             <h4 className="font-heading font-bold text-sm text-dn-navy">
                                 Book or Inquire About This Itinerary
                             </h4>
@@ -502,7 +502,7 @@ const TourSection = () => {
                     </div>
 
                     {/* Right: Map View with Fallback and List */}
-                    <div className="col-span-1 lg:col-span-2 space-y-4">
+                    <div className="col-span-1 lg:col-span-2 flex flex-col h-full space-y-4">
                         <div className="relative rounded-[32px] md:rounded-[40px] overflow-hidden shadow-2xl border border-white/20 h-96 lg:h-125 bg-gray-100">
                             <TourMap
                                 locations={activeOption.locations}
@@ -513,7 +513,7 @@ const TourSection = () => {
 
 
                         {/* Alternative List-based Destination Selection (Accessible & Mobile-friendly) */}
-                        <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100">
+                        <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 mt-auto">
                             <h4 className="text-xs uppercase font-bold tracking-wider text-gray-400 mb-3">
                                 Itinerary Stops ({activeOption.locations.length} Places):
                             </h4>
