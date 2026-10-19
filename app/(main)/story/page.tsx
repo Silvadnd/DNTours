@@ -48,14 +48,14 @@ export default function StoryPage() {
                             Born from a Passion for <span className="text-[#FF6A2A]">Discovery</span>
                         </h2>
                         <p className="font-body text-slate-600 leading-relaxed text-base md:text-lg">
-                            DN Tours started with a simple idea: to show the world the real Sri Lanka. Not just the crowded tourist spots, but the heart, soul, and hidden natural wonders of the island.
+                            DN Tours started with a simple idea to show the world the real Sri Lanka. Not just the crowded tourist spots, but the heart, soul, and hidden natural wonders of the island.
                         </p>
                         <p className="font-body text-slate-600 leading-relaxed text-base md:text-lg">
                             Founded by travel enthusiasts who grew up exploring Sri Lanka&apos;s southern coasts and central highlands, we wanted to share that same genuine warmth with every visitor who arrives in Ahungalla.
                         </p>
                     </div>
                     <div className="relative h-100 rounded-3xl overflow-hidden shadow-xl border border-slate-200/80">
-                        <Image src="/images/ui/59.jpg" alt="The Beginning of DN Tours" fill className="object-cover" />
+                        <Image src="/images/ui/100.jpg" alt="The Beginning of DN Tours" fill className="object-cover" />
                     </div>
                 </div>
 

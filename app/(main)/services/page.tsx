@@ -39,7 +39,7 @@ const services = [
     {
         title: "Excursions to Iconic Attractions & Safaris",
         desc: "From UNESCO World Heritage sites (Sigiriya, Galle Fort, Kandy) to thrilling wildlife safaris in Yala and Udawalawe, enjoy seamless day excursions.",
-        image: "/images/ui/27.jpeg",
+        image: "/images/ui/200.jpeg",
         icon: Map,
     }
 ];

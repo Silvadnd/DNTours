@@ -243,7 +243,7 @@ const tours = {
             { id: "5d1-l4", name: "Kandy", lat: 7.2936, lng: 80.6413, image: "/images/ui/24.jpeg" },
             { id: "5d1-l5", name: "Dambulla Cave Temple", lat: 7.8565, lng: 80.6482, image: "/images/ui/25.jpeg" },
             { id: "5d1-l6", name: "Sigiriya Rock Fortress", lat: 7.9570, lng: 80.7603, image: "/images/ui/26.jpeg" },
-            { id: "5d1-l7", name: "Anuradhapura Ancient City", lat: 8.3114, lng: 80.4037, image: "/images/ui/27.jpeg" }
+            { id: "5d1-l7", name: "Anuradhapura Ancient City", lat: 8.3114, lng: 80.4037, image: "/images/ui/200.jpeg" }
         ]
     },
 
