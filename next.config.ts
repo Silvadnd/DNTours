@@ -20,6 +20,15 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: '/explore',
+        destination: '/#explore-places',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

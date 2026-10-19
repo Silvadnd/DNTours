@@ -3,8 +3,8 @@
 
 export const siteConfig = {
   name: "DN Tours Ahungalla",
-  title: "DN Tours Ahungalla | #1 Sri Lanka Tour Guide & Travel Expert",
-  description: "DN Tours Ahungalla - Premier Sri Lanka travel guide & tour operator. Experience authentic Sri Lankan adventures, pristine beaches, cultural heritage tours, wildlife safaris & personalized travel services. Based in Ahungalla, serving all Sri Lanka. 5-star rated by 1000+ travelers.",
+  title: "DN Tours | Private Sri Lanka Tours & Chauffeur Guide from Ahungalla",
+  description: "Personalized private Sri Lanka tours, comfortable airport transfers, scenic day excursions, and dedicated chauffeur-guide service based in Ahungalla, Sri Lanka.",
   url: "https://dntoursahungalla.com",
   ogImage: "https://dntoursahungalla.com/og-image.jpg",
   keywords: [
@@ -338,25 +338,22 @@ export const siteConfig = {
   
   // Contact & Business Info
   contact: {
-    email: "info@dntoursahungalla.com",
-    alternateEmail: "booking@dntoursahungalla.com",
-    phone: "+94 XX XXX XXXX",
-    whatsapp: "+94 XX XXX XXXX",
-    viber: "+94 XX XXX XXXX",
-    address: "Ahungalla, Galle District, Southern Province, Sri Lanka",
+    email: "da.dinethnawanjana@gmail.com",
+    alternateEmail: "da.dinethnawanjana@gmail.com",
+    phone: "+94 77 945 2473",
+    whatsapp: "+94 77 945 2473",
+    viber: "+94 77 945 2473",
+    address: "Galwehera, Ahungalla 80562, Southern Province, Sri Lanka",
     postalCode: "80562",
   },
   
   // Social Media
   social: {
-    facebook: "https://facebook.com/dntoursahungalla",
-    instagram: "https://instagram.com/dntoursahungalla",
-    tiktok: "https://tiktok.com/@dntoursahungalla",
-    twitter: "https://twitter.com/dntoursahungalla",
-    youtube: "https://youtube.com/@dntoursahungalla",
-    linkedin: "https://linkedin.com/company/dntoursahungalla",
-    pinterest: "https://pinterest.com/dntoursahungalla",
-    tripadvisor: "https://tripadvisor.com/dntoursahungalla",
+    instagram: "https://www.instagram.com/dn_tours_ahungalla?igsh=dGxwZG5laTZwNDF5&utm_source=qr",
+    facebook: "https://web.facebook.com/profile.php?id=100092422871408",
+    tiktok: "https://www.tiktok.com/@dntoursahungalla?_r=1&_t=ZS-93MkuZFs9rx",
+    youtube: "https://youtube.com/@dntoursahungalla01?si=jD3Pgm5cADaR8gaA",
+    whatsapp: "https://api.whatsapp.com/send/?phone=94779452473",
   },
   
   // Business Hours
@@ -372,52 +369,64 @@ export const siteConfig = {
   
   // Pricing & Payment
   priceRange: "$$",
-  currencies: ["LKR", "USD", "EUR", "GBP", "AUD"],
-  paymentMethods: ["Cash", "Credit Card", "Debit Card", "Bank Transfer", "PayPal", "Wise"],
+  currencies: ["LKR", "USD", "EUR", "GBP"],
+  paymentMethods: ["Cash", "Bank Transfer"],
 };
 
 // Page-specific SEO configurations
 export const pageMetadata = {
   home: {
-    title: "DN Tours | Best Sri Lanka Tour Guide & Travel Services 2026",
-    description: "Discover Sri Lanka with DN Tours - Your #1 rated local travel guide. Explore ancient temples, pristine beaches, wildlife safaris & tea plantations. Personalized tours for UK, US, German & Russian travelers. Book now!",
-    keywords: "Sri Lanka tour guide, best tour guide Sri Lanka, Sri Lanka travel, Sri Lanka tours 2026, private tour Sri Lanka, local guide Sri Lanka",
+    title: "DN Tours | Private Sri Lanka Tours & Transfers from Ahungalla",
+    description: "Discover Sri Lanka with DN Tours Ahungalla. Authentic private tours, day trips, wildlife safaris, UNESCO heritage visits, and dedicated chauffeur service tailored to your pace.",
+    keywords: "Sri Lanka private tours, DN Tours Ahungalla, private driver Sri Lanka, Ahungalla day trips, Sri Lanka chauffeur guide, Sigiriya tour, Galle tour, Yala safari",
   },
   
   tours: {
-    title: "Sri Lanka Tour Packages 2026 | Custom Tours from Ahungalla - DN Tours",
-    description: "🌴 Premium Sri Lanka tour packages starting from Ahungalla. Cultural tours, wildlife safaris, beach holidays, adventure activities, tea plantation visits & more. Flexible itineraries, expert multilingual guides, competitive rates. From 1-day excursions to 14-day grand tours. Free consultation & custom planning. Best value guaranteed!",
-    keywords: "Sri Lanka tour packages, tours from Ahungalla, Sri Lanka excursions, cultural tours Sri Lanka, adventure tours, wildlife safari, beach tours, custom tours, day trips, multi-day tours",
+    title: "Sri Lanka Tour Packages | Private Itineraries from Ahungalla - DN Tours",
+    description: "Flexible Sri Lanka private tour itineraries starting from Ahungalla. Day excursions and multi-day island journeys with an experienced English-speaking private driver.",
+    keywords: "Sri Lanka tour packages, tours from Ahungalla, Sri Lanka day trips, multi-day tours Sri Lanka, custom tour Sri Lanka",
   },
   
   services: {
-    title: "Tour Guide Services Sri Lanka | Professional Chauffeur & Driver - DN Tours",
-    description: "🚗 Professional tour guide & chauffeur services across Sri Lanka. Private driver, airport transfers (Colombo/Mattala), day tours, multi-day packages, photography tours, adventure activities, hotel transfers. Comfortable air-conditioned vehicles. Licensed drivers. English, German, Russian, French speaking guides. Available 24/7. Competitive rates.",
-    keywords: "tour guide services, chauffeur service Sri Lanka, private driver Sri Lanka, airport transfer Colombo, day tours, multi-day tours, car rental with driver, professional driver guide",
+    title: "Private Driver & Tour Services | DN Tours Ahungalla",
+    description: "Comfortable air-conditioned private transport, airport transfers between Colombo BIA and southern coast, day trips, and custom travel planning across Sri Lanka.",
+    keywords: "tour guide services, chauffeur service Sri Lanka, private driver Sri Lanka, airport transfer Colombo, Ahungalla airport taxi, day tours Sri Lanka",
   },
   
   about: {
-    title: "About DN Tours Ahungalla | Licensed Sri Lanka Travel Expert Since 2015",
-    description: "🏆 Meet DN Tours - Award-winning local Sri Lanka tour guide based in Ahungalla. 15+ years experience, Sri Lanka Tourism Board certified, licensed professional guide. Specializing in personalized tours, cultural immersion & authentic experiences. Family-owned business serving 1000+ international travelers. Featured in TripAdvisor, Lonely Planet. Read 500+ five-star reviews.",
-    keywords: "about DN Tours, DN Tours Ahungalla, Sri Lanka tour guide, professional guide, local expert, certified guide, licensed tour operator, experienced guide",
+    title: "About DN Tours | Local Private Tour Service in Ahungalla",
+    description: "Meet DN Tours, a local travel service based in Ahungalla, Sri Lanka. Personalized tours, scenic discoveries, and warm Sri Lankan hospitality.",
+    keywords: "about DN Tours, DN Tours Ahungalla, Sri Lanka tour guide, private driver Ahungalla, local travel service Sri Lanka",
   },
   
   contact: {
-    title: "Contact DN Tours Ahungalla | Book Sri Lanka Tour | Free Consultation",
-    description: "📞 Contact DN Tours Ahungalla for free travel consultation & custom itinerary planning. WhatsApp 24/7 support. Quick response guaranteed. Email: info@dntoursahungalla.com | Phone/Viber available. Based in Ahungalla, serving all Sri Lanka. Instant quotes, flexible booking, secure payment options. Start planning your dream Sri Lanka vacation today!",
-    keywords: "contact DN Tours, book Sri Lanka tour, tour booking Ahungalla, consultation, travel planning, WhatsApp booking, email booking, instant quote",
+    title: "Contact DN Tours Ahungalla | Plan Your Sri Lanka Tour",
+    description: "Connect with DN Tours to plan your customized Sri Lanka holiday, private driver booking, or airport transfer. Fast response via WhatsApp or email.",
+    keywords: "contact DN Tours, book Sri Lanka tour, Ahungalla tour booking, WhatsApp travel guide Sri Lanka",
   },
   
   memory: {
-    title: "DN Your Memory | Share Sri Lanka Travel Photos & Stories | Travel Community",
-    description: "📸 Share your unforgettable Sri Lanka travel memories with DN Tours community! Upload photos, videos, travel stories from your Sri Lankan adventure. Connect with fellow travelers, get inspired, share tips. See real experiences from 1000+ travelers. Join our growing travel community. Tag us #DNToursAhungalla #SriLankaMemories",
-    keywords: "Sri Lanka travel stories, travel photos Sri Lanka, customer experiences, travel memories, Sri Lanka adventures, travel community, photo sharing, traveler reviews",
+    title: "Guest Memories & Travel Stories | DN Tours Sri Lanka",
+    description: "View authentic travel moments, scenic highlights, and shared memories from travellers who journeyed across Sri Lanka with DN Tours.",
+    keywords: "Sri Lanka travel stories, customer experiences, travel photos Sri Lanka, travel memories",
   },
   
   explore: {
-    title: "Explore Sri Lanka 2026 | Top 50 Destinations & Hidden Gems - Interactive Guide",
-    description: "🗺️ Complete Sri Lanka travel guide: Sigiriya Rock Fortress, Ella Nine Arches Bridge, Yala National Park leopard safari, Galle Fort UNESCO site, Adam's Peak pilgrimage, pristine beaches, ancient temples & secret spots only locals know. Interactive map, travel tips, best times to visit, insider recommendations. From cultural triangle to coastal paradises.",
-    keywords: "explore Sri Lanka, Sri Lanka destinations, tourist attractions, hidden gems, places to visit Sri Lanka, interactive map, travel guide, must-visit places, UNESCO sites",
+    title: "Explore Places in Sri Lanka | DN Tours Ahungalla",
+    description: "Discover must-visit destinations across Sri Lanka including Sigiriya, Ella, Galle Fort, Yala, Bentota, and Nuwara Eliya with DN Tours.",
+    keywords: "places to visit Sri Lanka, Sri Lanka destinations, Sigiriya Rock, Galle Fort, Ella Nine Arch Bridge, Yala National Park",
+  },
+
+  privacy: {
+    title: "Privacy Policy | DN Tours Ahungalla",
+    description: "Learn how DN Tours Ahungalla protects your personal information and booking enquiry details when planning your Sri Lanka journey.",
+    keywords: "DN Tours privacy policy, data protection, travel booking privacy Sri Lanka",
+  },
+
+  terms: {
+    title: "Terms of Service & Booking Conditions | DN Tours Ahungalla",
+    description: "Review our clear booking policies, payment details, itinerary flexibility, and cancellation terms for private tours with DN Tours Ahungalla.",
+    keywords: "DN Tours terms of service, Sri Lanka tour booking conditions, cancellation policy",
   },
 };
 
@@ -428,51 +437,66 @@ export function generateLocalBusinessSchema() {
     "@type": "TravelAgency",
     "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.name,
-    legalName: "DN Tours Sri Lanka",
+    legalName: "DN Tours Ahungalla",
     description: siteConfig.description,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/images/logo/logo.png`,
+    logo: `${siteConfig.url}/images/logo/DNlogo.png`,
     image: siteConfig.ogImage,
     telephone: siteConfig.contact.phone,
     email: siteConfig.contact.email,
     address: {
       "@type": "PostalAddress",
       addressCountry: "LK",
-      addressLocality: "Colombo",
-      addressRegion: "Western Province",
-      postalCode: "00000",
-      streetAddress: "Colombo, Sri Lanka",
+      addressLocality: "Ahungalla",
+      addressRegion: "Southern Province",
+      postalCode: "80562",
+      streetAddress: "Galwehera, Ahungalla",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "6.9271",
-      longitude: "79.8612",
+      latitude: "6.3134",
+      longitude: "80.0347",
     },
     areaServed: {
       "@type": "Country",
       name: "Sri Lanka",
     },
     serviceType: [
-      "Tour Guide Services",
-      "Travel Planning",
-      "Cultural Tours",
-      "Adventure Tours",
+      "Private Sri Lanka Tours",
+      "Chauffeur Driver Service",
+      "Airport Transfers",
+      "Day Trips & Sightseeing",
       "Wildlife Safaris",
-      "Beach Holidays",
-      "Transportation Services",
+      "Cultural & Heritage Excursions",
     ],
     priceRange: "$$",
     currenciesAccepted: "LKR, USD, EUR, GBP",
-    paymentAccepted: "Cash, Credit Card, Bank Transfer",
+    paymentAccepted: "Cash, Bank Transfer",
     openingHours: "Mo-Su 00:00-23:59",
-    sameAs: Object.values(siteConfig.social),
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "500",
-      bestRating: "5",
-      worstRating: "1",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: siteConfig.contact.phone,
+      contactType: "customer service",
+      email: siteConfig.contact.email,
+      availableLanguage: ["English", "German", "Russian", "French"],
+      areaServed: "LK",
     },
+    sameAs: Object.values(siteConfig.social),
+  };
+}
+
+export function generateFAQSchema(faqs: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
   };
 }
 

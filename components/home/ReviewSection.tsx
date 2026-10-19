@@ -94,18 +94,18 @@ const ReviewSection = () => {
     };
 
     return (
-        <section className="py-20 bg-white relative overflow-hidden">
-            {/* Decor */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-dn-orange/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
-
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="mb-12">
-                    <div>
-                        <h2 className="font-heading font-bold text-3xl md:text-5xl text-dn-navy mb-4">
-                            Stories from <span className="text-dn-orange">Travelers</span>
-                        </h2>
-                        <p className="text-gray-600">Don&apos;t just take our word for it.</p>
-                    </div>
+        <section id="reviews" className="py-20 md:py-28 bg-[#F8FAFC] relative overflow-hidden scroll-mt-20 border-t border-slate-200/60">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="text-center mb-12 space-y-3">
+                    <span className="text-xs uppercase tracking-widest font-bold text-[#0D9488] bg-[#0D9488]/10 px-4 py-1.5 rounded-full inline-block">
+                        Verified Traveler Feedback
+                    </span>
+                    <h2 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl text-[#0F172A]">
+                        Stories from <span className="text-[#FF6A2A]">Travelers</span>
+                    </h2>
+                    <p className="text-slate-600 max-w-xl mx-auto text-base md:text-lg">
+                        Genuine feedback from international visitors who explored Sri Lanka with DN Tours Ahungalla.
+                    </p>
                 </div>
 
                 {/* Form */}
@@ -190,32 +190,34 @@ const ReviewSection = () => {
                         640: { slidesPerView: 2 },
                         1024: { slidesPerView: 3 },
                     }}
-                    autoplay={{ delay: 3000, disableOnInteraction: false }}
+                    autoplay={{ delay: 7000, disableOnInteraction: false, pauseOnMouseEnter: true }}
                     modules={[Autoplay, Pagination]}
                     className="pb-12"
                 >
                     {reviews.map((review) => (
                         <SwiperSlide key={review.id} className="h-full">
-                            <div className="h-full p-8 bg-dn-bg rounded-3xl border border-gray-100 hover:shadow-lg transition-shadow">
-                                <div className="flex gap-1 mb-4">
-                                    {[...Array(5)].map((_, i) => (
-                                        <Star
-                                            key={i}
-                                            size={16}
-                                            className={i < review.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-300"}
-                                        />
-                                    ))}
+                            <div className="h-full p-8 bg-white rounded-3xl border border-[#E5E0D8]/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+                                <div>
+                                    <div className="flex gap-1 mb-4" aria-label={`${review.rating} out of 5 stars`}>
+                                        {[...Array(5)].map((_, i) => (
+                                            <Star
+                                                key={i}
+                                                size={16}
+                                                className={i < review.rating ? "text-amber-400 fill-amber-400" : "text-gray-200"}
+                                            />
+                                        ))}
+                                    </div>
+                                    <p className="text-slate-600 mb-6 italic text-sm md:text-base leading-relaxed min-h-20">&quot;{review.message}&quot;</p>
                                 </div>
-                                <p className="text-gray-600 mb-6 italic min-h-20">&quot;{review.message}&quot;</p>
-                                <div className="flex justify-between items-end">
+                                <div className="flex justify-between items-end pt-4 border-t border-slate-100">
                                     <div>
-                                        <p className="font-bold text-dn-navy">{review.name}</p>
+                                        <p className="font-heading font-bold text-[#0B1B2B]">{review.name}</p>
                                         {review.tags && review.tags.length > 0 && (
-                                            <div className="flex flex-wrap gap-2 mt-2">
+                                            <div className="flex flex-wrap gap-1.5 mt-2">
                                                 {review.tags.map((tag, idx) => (
                                                     <span 
                                                         key={idx} 
-                                                        className="text-xs px-3 py-1 bg-gray-50 border border-gray-200 rounded-full text-gray-600 hover:bg-gray-100 hover:border-gray-300 transition-all cursor-default select-none"
+                                                        className="text-xs px-2.5 py-0.5 bg-[#E8F5F1] border border-teal-100 rounded-full text-[#0D9488] font-medium"
                                                     >
                                                         {tag}
                                                     </span>
@@ -223,8 +225,8 @@ const ReviewSection = () => {
                                             </div>
                                         )}
                                     </div>
-                                    <div className="text-dn-orange opacity-20">
-                                        <MessageSquare size={40} />
+                                    <div className="text-[#0D9488]/30">
+                                        <MessageSquare size={36} />
                                     </div>
                                 </div>
                             </div>

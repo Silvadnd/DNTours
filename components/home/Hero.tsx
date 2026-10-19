@@ -67,8 +67,7 @@ const Hero = () => {
                 animate={{ y: [0, 10, 0] }}
                 transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
                 onClick={() => {
-                    const nextSection = document.getElementById('experience');
-                    nextSection?.scrollIntoView({ behavior: 'smooth' });
+                    window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
                 }}
             >
                 <div className="w-7.5 h-12.5 border-2 border-white/50 rounded-full flex justify-center p-2 backdrop-blur-sm">

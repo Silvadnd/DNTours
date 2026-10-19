@@ -143,11 +143,14 @@ export default function MemoryPage() {
     };
 
     return (
-        <div className="min-h-screen pt-24 pb-20 bg-gray-50">
+        <div className="min-h-screen pt-24 pb-20 bg-[#F8FAFC]">
             <div className="max-w-md mx-auto px-4">
-                <div className="text-center mb-8">
-                    <h1 className="font-heading font-bold text-3xl text-dn-navy">DN Your Memory</h1>
-                    <p className="text-gray-500 text-sm">Moments captured by our travelers.</p>
+                <div className="text-center mb-8 space-y-2">
+                    <span className="text-xs uppercase tracking-widest font-bold text-[#0D9488] bg-[#0D9488]/10 px-3.5 py-1 rounded-full inline-block">
+                        Traveler Community
+                    </span>
+                    <h1 className="font-heading font-bold text-3xl text-[#0F172A]">DN Travel Memories</h1>
+                    <p className="text-slate-500 text-sm">Moments captured by our international travelers across Sri Lanka.</p>
                 </div>
 
                 {/* Search */}
@@ -157,27 +160,27 @@ export default function MemoryPage() {
                         placeholder="Search by user or location..."
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
-                        className="w-full pl-10 pr-4 py-3 rounded-xl border-none shadow-lg focus:outline-none focus:ring-2 focus:ring-dn-orange/50 bg-white"
+                        className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#0D9488]/40 bg-white"
                     />
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400" size={20} />
                 </div>
 
                 {/* Feed */}
                 <div className="space-y-8">
                     {filteredPosts.map(post => (
-                        <div key={post.id} className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+                        <div key={post.id} className="bg-white rounded-3xl shadow-sm border border-slate-200/80 overflow-hidden">
                             {/* Header */}
                             <div className="flex items-center justify-between p-4">
                                 <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 rounded-full overflow-hidden relative border border-gray-200">
+                                    <div className="w-10 h-10 rounded-full overflow-hidden relative border border-slate-200">
                                         <Image src={post.avatar} alt={post.user} fill className="object-cover" />
                                     </div>
                                     <div>
-                                        <p className="font-bold text-sm text-dn-navy">{post.user}</p>
-                                        <p className="text-xs text-gray-500">{post.location}</p>
+                                        <p className="font-heading font-bold text-sm text-[#0F172A]">{post.user}</p>
+                                        <p className="text-xs text-slate-500">{post.location}</p>
                                     </div>
                                 </div>
-                                <MoreHorizontal size={20} className="text-gray-400" />
+                                <MoreHorizontal size={20} className="text-slate-400" />
                             </div>
 
                             {/* Media with Double Tap */}

@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import TourMap from "./TourMap";
 import clsx from "clsx";
-import { motion } from "framer-motion";
 
 // Sample Data using placeholder images from UI folder
 const tours = {
@@ -388,34 +387,47 @@ const TourSection = () => {
     const days = Object.keys(tours);
     const [activeDay, setActiveDay] = useState("Two Days");
     const [selectedOptionId, setSelectedOptionId] = useState<string>(tours["Two Days"][0].id);
+    const [selectedLocationId, setSelectedLocationId] = useState<string | undefined>(undefined);
 
     const activeTourOptions = tours[activeDay as keyof typeof tours];
     const activeOption = activeTourOptions.find(o => o.id === selectedOptionId) || activeTourOptions[0];
 
+    const stopsList = activeOption.locations.map(l => l.name).join(", ");
+    const whatsappMessage = encodeURIComponent(
+        `Hello DN Tours! I am interested in booking the "${activeOption.name}" (${activeDay}) itinerary covering ${stopsList}. Please share details and availability.`
+    );
+
     return (
-        <section id="tours" className="py-20 bg-dn-bg relative">
+        <section id="tours" className="py-20 md:py-28 bg-white relative scroll-mt-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
-                    <h2 className="font-heading font-bold text-3xl md:text-5xl text-dn-navy mb-4">
-                        Plan Your <span className="text-dn-orange">Perfect</span> Tour
+                    <span className="text-xs uppercase tracking-widest font-bold text-[#0D9488] bg-[#0D9488]/10 px-4 py-1.5 rounded-full inline-block mb-3">
+                        Tailored Sri Lanka Journeys
+                    </span>
+                    <h2 className="font-heading font-bold text-3xl md:text-5xl text-[#0F172A] mb-4">
+                        Tailored Sri Lanka <span className="text-[#FF6A2A]">Journeys</span>
                     </h2>
-                    <p className="text-gray-600">Select duration and explore itineraries</p>
+                    <p className="text-slate-600 max-w-2xl mx-auto text-base md:text-lg">
+                        Select a duration to explore curated itineraries, or plan a flexible custom route with your dedicated private driver from Ahungalla.
+                    </p>
                 </div>
 
                 {/* Day Tabs */}
-                <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8">
+                <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-10">
                     {days.map((day) => (
                         <button
                             key={day}
                             onClick={() => {
                                 setActiveDay(day);
-                                setSelectedOptionId(tours[day as keyof typeof tours][0].id);
+                                const firstOption = tours[day as keyof typeof tours][0];
+                                setSelectedOptionId(firstOption.id);
+                                setSelectedLocationId(firstOption.locations[0]?.id);
                             }}
                             className={clsx(
-                                "px-6 py-2 rounded-full text-sm md:text-base font-medium transition-all duration-300",
+                                "px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer",
                                 activeDay === day
-                                    ? "bg-dn-navy text-white shadow-lg scale-105"
-                                    : "bg-white text-gray-500 hover:bg-gray-100 border border-gray-200"
+                                    ? "bg-[#0D9488] text-white shadow-md scale-105"
+                                    : "bg-white text-slate-700 hover:bg-slate-100 border border-slate-200"
                             )}
                         >
                             {day}
@@ -423,41 +435,111 @@ const TourSection = () => {
                     ))}
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:h-175">
-
+                {/* Main Tour Grid */}
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {/* Left: Options Selection */}
-                    <div className="col-span-1 space-y-4 overflow-y-auto pr-2 custom-scrollbar max-h-100 lg:max-h-none">
-                        {activeTourOptions.map((option) => (
-                            <motion.div
-                                key={option.id}
-                                layoutId={option.id}
-                                onClick={() => setSelectedOptionId(option.id)}
-                                className={clsx(
-                                    "p-6 rounded-2xl cursor-pointer transition-all duration-300 border-2",
-                                    selectedOptionId === option.id
-                                        ? "bg-white border-dn-orange shadow-xl relative overflow-hidden"
-                                        : "bg-white/50 border-transparent hover:bg-white hover:shadow-md"
-                                )}
-                            >
-                                {selectedOptionId === option.id && (
-                                    <div className="absolute top-0 right-0 p-2 bg-dn-orange rounded-bl-xl">
-                                        <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+                    <div className="col-span-1 space-y-4">
+                        <div className="space-y-4 max-h-120 overflow-y-auto pr-2 custom-scrollbar">
+                            {activeTourOptions.map((option) => (
+                                <div
+                                    key={option.id}
+                                    onClick={() => {
+                                        setSelectedOptionId(option.id);
+                                        setSelectedLocationId(option.locations[0]?.id);
+                                    }}
+                                    className={clsx(
+                                        "p-6 rounded-2xl cursor-pointer transition-all duration-300 border-2",
+                                        selectedOptionId === option.id
+                                            ? "bg-white border-[#0D9488] shadow-lg relative overflow-hidden"
+                                            : "bg-white/80 border-transparent hover:bg-white hover:shadow-md"
+                                    )}
+                                >
+                                    {selectedOptionId === option.id && (
+                                        <div className="absolute top-0 right-0 p-2 bg-[#0D9488] rounded-bl-xl">
+                                            <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+                                        </div>
+                                    )}
+                                    <h3 className={clsx("font-bold text-lg mb-2", selectedOptionId === option.id ? "text-dn-navy" : "text-gray-700")}>
+                                        {option.name}
+                                    </h3>
+                                    <p className="text-sm text-gray-500 leading-relaxed mb-3">{option.description}</p>
+                                    <div className="flex items-center gap-2 text-xs font-semibold text-dn-orange">
+                                        <span>{option.locations.length} Key Stops Included</span>
                                     </div>
-                                )}
-                                <h3 className={clsx("font-bold text-xl mb-2", selectedOptionId === option.id ? "text-dn-navy" : "text-gray-500")}>
-                                    {option.name}
-                                </h3>
-                                <p className="text-sm text-gray-500">{option.description}</p>
-                            </motion.div>
-                        ))}
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Action Box for Selected Tour */}
+                        <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-md space-y-3">
+                            <h4 className="font-heading font-bold text-sm text-dn-navy">
+                                Book or Inquire About This Itinerary
+                            </h4>
+                            <p className="text-xs text-gray-500">
+                                Pricing is customized based on vehicle type and passenger count. No upfront payment required to discuss plans.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-2 pt-2">
+                                <a
+                                    href={`https://api.whatsapp.com/send/?phone=94779452473&text=${whatsappMessage}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex-1"
+                                >
+                                    <button className="w-full py-2.5 px-4 rounded-xl bg-green-600 hover:bg-green-700 text-white font-bold text-xs transition-colors flex items-center justify-center gap-1.5 shadow-xs">
+                                        <span>Enquire on WhatsApp</span>
+                                    </button>
+                                </a>
+                                <a
+                                    href="/contact"
+                                    className="flex-1"
+                                >
+                                    <button className="w-full py-2.5 px-4 rounded-xl bg-dn-navy hover:bg-dn-navy/90 text-white font-bold text-xs transition-colors text-center shadow-xs">
+                                        Customize Route
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
-                    {/* Right: Map */}
-                    <div className="col-span-1 lg:col-span-2 relative rounded-[40px] overflow-hidden shadow-2xl border border-white/20 h-125 lg:h-full">
+                    {/* Right: Map View with Fallback and List */}
+                    <div className="col-span-1 lg:col-span-2 space-y-4">
+                        <div className="relative rounded-[32px] md:rounded-[40px] overflow-hidden shadow-2xl border border-white/20 h-96 lg:h-125 bg-gray-100">
+                            <TourMap
+                                locations={activeOption.locations}
+                                activeLocationId={selectedLocationId}
+                                onSelectLocation={setSelectedLocationId}
+                            />
+                        </div>
 
 
-                        <div className="w-full h-full">
-                            <TourMap locations={activeOption.locations} />
+                        {/* Alternative List-based Destination Selection (Accessible & Mobile-friendly) */}
+                        <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100">
+                            <h4 className="text-xs uppercase font-bold tracking-wider text-gray-400 mb-3">
+                                Itinerary Stops ({activeOption.locations.length} Places):
+                            </h4>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                                {activeOption.locations.map((loc, idx) => (
+                                    <div
+                                        key={loc.id}
+                                        onClick={() => setSelectedLocationId(loc.id)}
+                                        className={clsx(
+                                            "flex items-center gap-3 p-2.5 rounded-xl border text-left cursor-pointer transition-all",
+                                            selectedLocationId === loc.id
+                                                ? "border-dn-orange bg-dn-orange/5 shadow-xs"
+                                                : "border-gray-100 hover:border-gray-200 bg-gray-50/50"
+                                        )}
+                                    >
+                                        <div className="w-8 h-8 rounded-lg overflow-hidden shrink-0 bg-dn-navy relative">
+                                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                                            <img src={loc.image} alt={loc.name} className="w-full h-full object-cover" />
+                                        </div>
+                                        <div className="min-w-0">
+                                            <p className="text-xs font-bold text-dn-navy truncate">{idx + 1}. {loc.name}</p>
+                                            <p className="text-[10px] text-gray-500">Tap to inspect</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -467,3 +549,4 @@ const TourSection = () => {
 };
 
 export default TourSection;
+

@@ -69,12 +69,12 @@ export const metadata: Metadata = {
     },
   },
   
-  // Verification tags (add your verification codes)
+  // Search Engine Verification (configured via environment variables or Webmaster Tools)
   verification: {
-    google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code",
+    ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } : {}),
+    ...(process.env.NEXT_PUBLIC_YANDEX_SITE_VERIFICATION ? { yandex: process.env.NEXT_PUBLIC_YANDEX_SITE_VERIFICATION } : {}),
     other: {
-      "msvalidate.01": "your-bing-verification-code",
+      ...(process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION ? { "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION } : {}),
     },
   },
   
@@ -96,7 +96,7 @@ export const metadata: Metadata = {
     canonical: siteConfig.url,
   },
   
-  manifest: "/manifest.json",
+  manifest: "/manifest.webmanifest",
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -117,10 +117,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        {/* Additional SEO tags */}
+        {/* Additional SEO & PWA theme tags */}
         <meta name="theme-color" content="#0A2540" />
         <meta name="format-detection" content="telephone=no" />
-        <link rel="canonical" href={siteConfig.url} />
       </head>
       <body
         className={clsx(

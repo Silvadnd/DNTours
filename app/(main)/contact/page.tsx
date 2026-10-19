@@ -63,7 +63,7 @@ export default function ContactPage() {
     };
 
     return (
-        <div className="bg-white min-h-screen">
+        <div className="bg-[#F8FAFC] min-h-screen">
             {/* Hero Section */}
             <section className="relative h-[60vh] min-h-125 w-full overflow-hidden">
                 <Image 
@@ -87,44 +87,43 @@ export default function ContactPage() {
 
             {/* Main Content */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
-                    {/* Contact Info */}
-                    <div className="space-y-12">
-                        <div className="space-y-6">
-                            <div className="flex items-center gap-6 p-6 rounded-2xl bg-dn-bg hover:shadow-lg transition-shadow">
-                                <div className="w-12 h-12 bg-dn-orange/10 rounded-full flex items-center justify-center text-dn-orange">
-                                    <Mail size={24} />
+                        {/* Contact Info */}
+                        <div className="space-y-12">
+                            <div className="space-y-6">
+                                <div className="flex items-center gap-6 p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#0D9488]/40 hover:shadow-md transition-all">
+                                    <div className="w-12 h-12 bg-[#0D9488]/10 rounded-full flex items-center justify-center text-[#0D9488] shrink-0">
+                                        <Mail size={24} />
+                                    </div>
+                                    <div>
+                                        <p className="font-heading font-bold text-lg text-[#0F172A]">Email Us</p>
+                                        <a href="mailto:da.dinethnawanjana@gmail.com" className="text-slate-600 hover:text-[#0D9488] transition-colors text-sm sm:text-base">da.dinethnawanjana@gmail.com</a>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p className="font-bold text-lg text-dn-navy">Email Us</p>
-                                    <a href="mailto:da.dinethnawanjana@gmail.com" className="text-gray-600 hover:text-dn-orange transition-colors">da.dinethnawanjana@gmail.com</a>
+
+                                <div className="flex items-center gap-6 p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#0D9488]/40 hover:shadow-md transition-all">
+                                    <div className="w-12 h-12 bg-[#0D9488]/10 rounded-full flex items-center justify-center text-[#0D9488] shrink-0">
+                                        <Phone size={24} />
+                                    </div>
+                                    <div>
+                                        <p className="font-heading font-bold text-lg text-[#0F172A]">Call Us</p>
+                                        <a href="tel:+94 77 945 2473" className="text-slate-600 hover:text-[#0D9488] transition-colors text-sm sm:text-base">+94 77 945 2473</a>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-center gap-6 p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#0D9488]/40 hover:shadow-md transition-all">
+                                    <div className="w-12 h-12 bg-[#0D9488]/10 rounded-full flex items-center justify-center text-[#0D9488] shrink-0">
+                                        <MapPin size={24} />
+                                    </div>
+                                    <div>
+                                        <p className="font-heading font-bold text-lg text-[#0F172A]">Visit Us</p>
+                                        <p className="text-slate-600 text-sm sm:text-base">Galwehera, Ahungalla, Ahungalla 80562, Sri Lanka</p>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div className="flex items-center gap-6 p-6 rounded-2xl bg-dn-bg hover:shadow-lg transition-shadow">
-                                <div className="w-12 h-12 bg-dn-orange/10 rounded-full flex items-center justify-center text-dn-orange">
-                                    <Phone size={24} />
-                                </div>
-                                <div>
-                                    <p className="font-bold text-lg text-dn-navy">Call Us</p>
-                                    <a href="tel:+94 77 945 2473" className="text-gray-600 hover:text-dn-orange transition-colors">+94 77 945 2473</a>
-                                </div>
-                            </div>
-
-                            <div className="flex items-center gap-6 p-6 rounded-2xl bg-dn-bg hover:shadow-lg transition-shadow">
-                                <div className="w-12 h-12 bg-dn-orange/10 rounded-full flex items-center justify-center text-dn-orange">
-                                    <MapPin size={24} />
-                                </div>
-                                <div>
-                                    <p className="font-bold text-lg text-dn-navy">Visit Us</p>
-                                    <p className="text-gray-600">Galwehera, Ahungalla, Ahungalla 80562</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h3 className="font-bold text-xl mb-6 text-dn-navy">Follow Our Journey</h3>
+                            <div>
+                                <h3 className="font-heading font-bold text-xl mb-6 text-[#0F172A]">Follow Our Journey</h3>
                             <div className="flex gap-4">
                                 {[
                                     { Icon: Instagram, href: "https://www.instagram.com/dn_tours_ahungalla?igsh=dGxwZG5laTZwNDF5&utm_source=qr", color: "hover:bg-pink-600", title: "Instagram" },
@@ -189,18 +188,18 @@ export default function ContactPage() {
                     </div>
 
                     {/* Contact Form */}
-                    <div className="bg-dn-bg p-8 md:p-10 rounded-3xl shadow-xl">
-                        <h3 className="font-heading font-bold text-2xl mb-6 text-dn-navy">Send a Message</h3>
+                    <div className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-200/80">
+                        <h3 className="font-heading font-bold text-2xl mb-6 text-[#0F172A]">Send a Message</h3>
                         
                         {isSubmitted ? (
                             <div className="text-center py-12">
-                                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <svg className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                     </svg>
                                 </div>
-                                <h4 className="text-2xl font-bold text-dn-navy mb-3">Thank You!</h4>
-                                <p className="text-gray-600 mb-6">Your message has been sent successfully. We&apos;ll get back to you soon!</p>
+                                <h4 className="text-2xl font-bold text-[#0F172A] mb-3">Thank You!</h4>
+                                <p className="text-slate-600 mb-6">Your message has been sent successfully. We&apos;ll get back to you soon!</p>
                                 <Button 
                                     onClick={() => setIsSubmitted(false)} 
                                     variant="primary"
@@ -213,26 +212,26 @@ export default function ContactPage() {
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
-                                        <label className="text-sm font-bold text-gray-700">First Name</label>
+                                        <label className="text-sm font-bold text-slate-700">First Name</label>
                                         <input 
                                             type="text" 
                                             name="firstName"
                                             value={formData.firstName}
                                             onChange={handleChange}
                                             required
-                                            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-dn-orange/50 transition-all" 
+                                            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#0D9488]/40 transition-all" 
                                             placeholder="John" 
                                         />
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="text-sm font-bold text-gray-700">Last Name</label>
+                                        <label className="text-sm font-bold text-slate-700">Last Name</label>
                                         <input 
                                             type="text" 
                                             name="lastName"
                                             value={formData.lastName}
                                             onChange={handleChange}
                                             required
-                                            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-dn-orange/50 transition-all" 
+                                            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#0D9488]/40 transition-all" 
                                             placeholder="Doe" 
                                         />
                                     </div>

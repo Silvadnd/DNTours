@@ -1,75 +1,96 @@
-"use client";
 import React from "react";
 import Image from "next/image";
-import CountUp from "react-countup";
-import { useInView } from "framer-motion";
+import { Metadata } from "next";
+import { pageMetadata, generateOGTags, generateTwitterTags } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: pageMetadata.about.title,
+  description: pageMetadata.about.description,
+  keywords: pageMetadata.about.keywords,
+  openGraph: generateOGTags("about"),
+  twitter: generateTwitterTags("about"),
+  alternates: {
+    canonical: "https://dntoursahungalla.com/story",
+  },
+};
 
 const stats = [
-    { label: "Years of Experience", value: 5, suffix: "+" },
-    { label: "Travelers Guided", value: 1000, suffix: "+" },
-    { label: "Tours Completed", value: 450, suffix: "+" },
-    { label: "Destinations Covered", value: 50, suffix: "+" },
+    { number: "5+", label: "Years of Experience" },
+    { number: "1,000+", label: "Travelers Guided" },
+    { number: "450+", label: "Tours Completed" },
+    { number: "50+", label: "Destinations Covered" },
 ];
 
 export default function StoryPage() {
-    const ref = React.useRef(null);
-    const isInView = useInView(ref, { once: true });
-
     return (
-        <div className="bg-white min-h-screen">
+        <div className="bg-[#F8FAFC] min-h-screen">
             {/* Hero Section for Story */}
-            <div className="relative h-[50vh] w-full flex items-center justify-center">
+            <div className="relative h-[48vh] w-full flex items-center justify-center">
                 <Image src="/images/ui/42.jpg" alt="Our Story" fill className="object-cover" />
-                <div className="absolute inset-0 bg-dn-navy/70" />
+                <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-[2px]" />
                 <div className="relative z-10 text-center text-white px-4">
-                    <h1 className="font-heading font-bold text-5xl md:text-6xl mb-4">Our Story</h1>
-                    <p className="font-body text-xl max-w-2xl mx-auto">From humble beginnings to creating unforgettable memories.</p>
+                    <span className="text-xs uppercase tracking-widest font-bold text-teal-300 bg-teal-900/40 px-4 py-1.5 rounded-full inline-block mb-3">
+                        About DN Tours
+                    </span>
+                    <h1 className="font-heading font-bold text-4xl md:text-6xl mb-3">Our Story</h1>
+                    <p className="font-body text-lg md:text-xl text-slate-100 max-w-2xl mx-auto">From humble beginnings to creating unforgettable Sri Lanka journeys.</p>
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-24">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-20">
                 {/* The Origin */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">
-                        <h2 className="font-heading font-bold text-3xl md:text-4xl text-dn-navy">Born from a Passion for <span className="text-dn-orange">Discovery</span></h2>
-                        <p className="font-body text-gray-600 leading-relaxed">
-                            DN Tours started with a simple idea: to show the world the real Sri Lanka. Not just the tourist spots, but the heart and soul of the island.
-                            Founded by travel enthusiasts who grew up exploring these mountains and beaches, we wanted to share that same sense of wonder with you.
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0D9488]/10 text-[#0D9488] text-xs font-bold uppercase tracking-widest">
+                            Our Origins
+                        </div>
+                        <h2 className="font-heading font-bold text-3xl md:text-4xl text-[#0F172A]">
+                            Born from a Passion for <span className="text-[#FF6A2A]">Discovery</span>
+                        </h2>
+                        <p className="font-body text-slate-600 leading-relaxed text-base md:text-lg">
+                            DN Tours started with a simple idea: to show the world the real Sri Lanka. Not just the crowded tourist spots, but the heart, soul, and hidden natural wonders of the island.
                         </p>
-                        <p className="font-body text-gray-600 leading-relaxed">
-                            We believe that travel is more than just sightseeing; it&apos;s about connection. Connecting with nature, with culture, and with people.
-                            That&apos;s why every tour we plan is personal, every guide we hire is passionate, and every recommendation we make is genuine.
+                        <p className="font-body text-slate-600 leading-relaxed text-base md:text-lg">
+                            Founded by travel enthusiasts who grew up exploring Sri Lanka&apos;s southern coasts and central highlands, we wanted to share that same genuine warmth with every visitor who arrives in Ahungalla.
                         </p>
                     </div>
-                    <div className="relative h-100 rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
-                        <Image src="/images/ui/59.jpg" alt="The Beginning" fill className="object-cover" />
+                    <div className="relative h-100 rounded-3xl overflow-hidden shadow-xl border border-slate-200/80">
+                        <Image src="/images/ui/59.jpg" alt="The Beginning of DN Tours" fill className="object-cover" />
                     </div>
                 </div>
 
-                {/* Stats Counter */}
-                <div ref={ref} className="bg-dn-navy rounded-[3rem] p-12 md:p-20 text-white shadow-2xl relative overflow-hidden">
-                    {/* Background Pattern */}
-                    <div className="absolute top-0 left-0 w-full h-full opacity-10"
-                        style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}>
+                {/* Core Values & Milestones */}
+                <div className="bg-white rounded-3xl p-10 md:p-14 border border-slate-200/80 shadow-sm relative overflow-hidden">
+                    <div className="text-center mb-10 space-y-2">
+                        <span className="text-xs uppercase tracking-widest font-bold text-[#0D9488] bg-[#0D9488]/10 px-3.5 py-1 rounded-full inline-block">
+                            Our Values
+                        </span>
+                        <h3 className="font-heading font-bold text-2xl md:text-3xl text-[#0F172A]">
+                            Proven Trust &amp; Island Expertise
+                        </h3>
                     </div>
 
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 text-center relative z-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center relative z-10">
                         {stats.map((stat, index) => (
-                            <div key={index} className="space-y-2">
-                                <p className="text-4xl md:text-6xl font-bold font-heading text-dn-orange">
-                                    {isInView ? <CountUp end={stat.value} duration={2.5} /> : 0}{stat.suffix}
+                            <div key={index} className="space-y-2 p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200/70 hover:border-[#0D9488]/40 hover:shadow-md transition-all">
+                                <p className="text-3xl md:text-4xl lg:text-5xl font-extrabold font-heading text-[#0D9488]">
+                                    {stat.number}
                                 </p>
-                                <p className="text-gray-300 font-medium uppercase tracking-wider text-sm md:text-base">{stat.label}</p>
+                                <p className="text-slate-700 font-semibold text-sm md:text-base leading-snug">
+                                    {stat.label}
+                                </p>
                             </div>
                         ))}
                     </div>
                 </div>
 
                 {/* Mission */}
-                <div className="text-center max-w-4xl mx-auto space-y-8">
-                    <h2 className="font-heading font-bold text-3xl md:text-4xl text-dn-navy">Our Mission</h2>
-                    <p className="text-xl md:text-2xl font-body text-gray-500 italic">
-                        &quot; To provide safe, unforgettable, and authentic Sri Lankan travel experiences that bridge cultures and create lifelong memories.&quot;
+                <div className="text-center max-w-3xl mx-auto space-y-6 p-8 bg-white rounded-3xl border border-slate-200/80 shadow-xs">
+                    <span className="text-xs uppercase tracking-widest font-bold text-[#0D9488] bg-[#0D9488]/10 px-3.5 py-1 rounded-full inline-block">
+                        Our Mission
+                    </span>
+                    <p className="text-xl md:text-2xl font-body text-slate-700 italic leading-relaxed">
+                        &quot;To provide safe, unforgettable, and authentic Sri Lankan travel experiences that bridge cultures and create lifelong memories.&quot;
                     </p>
                 </div>
             </div>

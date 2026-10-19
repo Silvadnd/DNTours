@@ -86,8 +86,10 @@ const Footer = () => {
                             {[
                                 { name: "Home", href: "/" },
                                 { name: "Services", href: "/services" },
-                                { name: "Explore Places", href: "/explore" },
-                                { name: "Our Story", href: "/story" }
+                                { name: "Explore Places", href: "/#explore-places" },
+                                { name: "Our Story", href: "/story" },
+                                { name: "Frequently Asked Questions", href: "/#faq" },
+                                { name: "Contact Us", href: "/contact" }
                             ].map((link) => (
                                 <li key={link.name} className="flex justify-center md:justify-start">
                                     <Link
